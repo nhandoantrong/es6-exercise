@@ -63,7 +63,6 @@ for (var i = 0; i < l; i++) {
 
 }
 
-
 // ten 10s
 for (let i = 0; i < l; i++) {
     setTimeout(() => {
@@ -73,3 +72,14 @@ for (let i = 0; i < l; i++) {
     //and there is a separate i variable for each iteration of the loop
 }
 // from 0 -> 9
+
+// fixed
+
+for (var i = 0; i < l; i++) {
+    
+    (function(i) {
+        // this is is different in each order
+        setTimeout(() => { console.log(i) }, ms);
+    })(i)
+
+}
